@@ -1,9 +1,12 @@
 import React from 'react';
 
-import logo from '../../../public/assets/images/logo.svg';
+import { CountryInfo } from './country.interface';
 import { Row } from './Row';
 
-export function RankingTable() {
+export function RankingTable({ countries = [] }: { countries: CountryInfo[] }) {
+  if (!countries.length) {
+    return null;
+  }
   return (
     <div className="container mx-auto pt-8">
       <table className="table-fixed w-full text-center">
@@ -20,13 +23,16 @@ export function RankingTable() {
           </tr>
         </thead>
         <tbody>
-          <Row
-            flag={logo}
-            countryName="UK"
-            population="15000000"
-            area="858"
-            gini="49%"
-          />
+          {countries.map((country) => (
+            <Row
+              flag={country.flag}
+              name={country.name}
+              population={country.population}
+              gini={country.gini}
+              area={country.area}
+              key={country.name}
+            />
+          ))}
         </tbody>
       </table>
     </div>
