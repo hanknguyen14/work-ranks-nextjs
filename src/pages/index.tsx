@@ -1,3 +1,6 @@
+import React from 'react';
+
+import { RankingTable } from '../components/ranking-table/RankingTable';
 import { Header } from '../layout/Header';
 import { Meta } from '../layout/Meta';
 import { Main } from '../templates/Main';
@@ -14,7 +17,7 @@ const Index = () => {
     >
       <>
         <Header />
-        <h1>This is homepage</h1>
+        <RankingTable />
       </>
     </Main>
   );
