@@ -4,7 +4,7 @@ import { CountryInfo } from './country.interface';
 
 export function Row({ flag, name, population, area, gini = 90 }: CountryInfo) {
   return (
-    <tr>
+    <tr className="bg-white rounded">
       <td className="flex">
         <Image
           className="hidden md:table-cell"
