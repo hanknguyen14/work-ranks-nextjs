@@ -31,6 +31,7 @@ export function RankingTable({ countries = [] }: { countries: CountryInfo[] }) {
               gini={country.gini}
               area={country.area}
               key={country.name}
+              alpha3Code={country.alpha3Code}
             />
           ))}
         </tbody>

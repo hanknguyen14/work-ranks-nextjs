@@ -34,7 +34,7 @@ const Index = ({ initCountries }: { initCountries: CountryInfo[] }) => {
 
 export async function getStaticProps() {
   const res = await fetch(
-    `https://restcountries.eu/rest/v2/all?fields=flag;name;population;area;gini;&page=1`
+    `https://restcountries.eu/rest/v2/all?fields=alpha3Code;flag;name;population;area;gini;&page=1`
   );
   const initCountries: CountryInfo[] = await res.json();
 
