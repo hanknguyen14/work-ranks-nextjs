@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { CountryDetail } from '../../components/countries/CountryDetail';
 import { Flag } from '../../components/countries/Flag';
 import { CountryInfo } from '../../components/ranking-table/country.interface';
 import { Header } from '../../layout/Header';
@@ -7,6 +8,19 @@ import { Meta } from '../../layout/Meta';
 import { Main } from '../../templates/Main';
 
 const Country = ({ country }: { country: CountryInfo }) => {
+  const {
+    name,
+    flag,
+    region,
+    population,
+    area,
+    languages,
+    currencies,
+    subregion,
+    capital,
+    nativeName,
+    gini,
+  } = country;
   return (
     <Main
       meta={
@@ -18,7 +32,10 @@ const Country = ({ country }: { country: CountryInfo }) => {
     >
       <Header />
       <div className="grid grid-flow-row grid-cols-3 gap-4 mt-16">
-        <Flag country={country} />
+        <Flag {...{ name, flag, region, population, area }} />
+        <CountryDetail
+          {...{ languages, currencies, subregion, capital, nativeName, gini }}
+        />
       </div>
     </Main>
   );
@@ -26,7 +43,7 @@ const Country = ({ country }: { country: CountryInfo }) => {
 
 export async function getStaticProps({ params }: any) {
   const response = await fetch(
-    `https://restcountries.eu/rest/v2/alpha/${params.id}`
+    `https://restcountries.eu/rest/v2/alpha/${params.id}?fields=flag;name;capital;currencies;languages;subregion;nativeName;region;gini;area;population`
   );
 
   const country: CountryInfo = await response.json();

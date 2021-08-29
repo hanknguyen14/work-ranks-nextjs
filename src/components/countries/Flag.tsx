@@ -4,13 +4,9 @@ import Image from 'next/image';
 
 import { CountryInfo } from '../ranking-table/country.interface';
 
-export function Flag({
-  country: { name, flag, region, population, area },
-}: {
-  country: CountryInfo;
-}) {
+export function Flag({ name, flag, region, population, area }: CountryInfo) {
   return (
-    <div className="text-center p-5 rounded shadow bg-white">
+    <div className="text-center p-8 rounded shadow bg-white">
       <Image src={flag} alt={`${name}'s flag`} width="280" height="215" />
       <h1 className="font-semibold text-3xl mt-2">{name}</h1>
       <h2 className="text-base text-blue-800">{region}</h2>
