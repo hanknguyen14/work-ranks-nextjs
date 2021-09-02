@@ -61,12 +61,18 @@ export async function getStaticPaths() {
   );
   const countries: CountryInfo[] = await response.json();
 
-  const paths = countries.map((country) => ({
+  const pathsEn = countries.map((country) => ({
     params: { id: country.alpha3Code },
+    locale: 'en',
+  }));
+
+  const pathsVi = countries.map((country) => ({
+    params: { id: country.alpha3Code },
+    locale: 'vi',
   }));
 
   return {
-    paths,
+    paths: [...pathsEn, ...pathsVi],
     fallback: false,
   };
 }

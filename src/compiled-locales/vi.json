@@ -1,0 +1,86 @@
+{
+  "+EKK8l": [
+    {
+      "type": 0,
+      "value": "Dân số"
+    }
+  ],
+  "4aal2m": [
+    {
+      "type": 0,
+      "value": "Chi tiết"
+    }
+  ],
+  "8o8Qs2": [
+    {
+      "type": 0,
+      "value": "Diện tích"
+    }
+  ],
+  "HAlOn1": [
+    {
+      "type": 0,
+      "value": "Tên"
+    }
+  ],
+  "IGbvgM": [
+    {
+      "type": 0,
+      "value": "Tìm theo tên quốc gia"
+    }
+  ],
+  "InfBXl": [
+    {
+      "type": 1,
+      "value": "key"
+    }
+  ],
+  "a5DnOM": [
+    {
+      "type": 0,
+      "value": "Phân hoá giàu nghèo"
+    }
+  ],
+  "capital": [
+    {
+      "type": 0,
+      "value": "Thủ đô"
+    }
+  ],
+  "currencies": [
+    {
+      "type": 0,
+      "value": "Đơn vị tiền tệ"
+    }
+  ],
+  "jpozrd": [
+    {
+      "type": 0,
+      "value": "quốc gia"
+    }
+  ],
+  "languages": [
+    {
+      "type": 0,
+      "value": "Ngôn ngữ"
+    }
+  ],
+  "nativeName": [
+    {
+      "type": 0,
+      "value": "Tên bản ngữ"
+    }
+  ],
+  "njt0nP": [
+    {
+      "type": 0,
+      "value": "Diện tích (km)"
+    }
+  ],
+  "subregion": [
+    {
+      "type": 0,
+      "value": "Phân miền"
+    }
+  ]
+}

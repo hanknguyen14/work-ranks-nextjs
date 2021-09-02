@@ -1,0 +1,80 @@
+{
+  "+EKK8l": [
+    {
+      "type": 0,
+      "value": "Population"
+    }
+  ],
+  "4aal2m": [
+    {
+      "type": 0,
+      "value": "Detail"
+    }
+  ],
+  "8o8Qs2": [
+    {
+      "type": 0,
+      "value": "Area"
+    }
+  ],
+  "HAlOn1": [
+    {
+      "type": 0,
+      "value": "Name"
+    }
+  ],
+  "IGbvgM": [
+    {
+      "type": 0,
+      "value": "Filter by Name, Region, Subregion"
+    }
+  ],
+  "a5DnOM": [
+    {
+      "type": 0,
+      "value": "Gini"
+    }
+  ],
+  "capital": [
+    {
+      "type": 0,
+      "value": "Capital"
+    }
+  ],
+  "currencies": [
+    {
+      "type": 0,
+      "value": "Currencies"
+    }
+  ],
+  "jpozrd": [
+    {
+      "type": 0,
+      "value": "countries"
+    }
+  ],
+  "languages": [
+    {
+      "type": 0,
+      "value": "Languages"
+    }
+  ],
+  "nativeName": [
+    {
+      "type": 0,
+      "value": "NativeName"
+    }
+  ],
+  "njt0nP": [
+    {
+      "type": 0,
+      "value": "Area (km)"
+    }
+  ],
+  "subregion": [
+    {
+      "type": 0,
+      "value": "Subregion"
+    }
+  ]
+}

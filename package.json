@@ -11,22 +11,29 @@
     "clean": "rimraf .next out",
     "lint": "next lint",
     "build-types": "tsc --noEmit --pretty",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "extract:i18n": "formatjs extract 'src/**/*.{js,ts,tsx}' --format simple --id-interpolation-pattern '[sha512:contenthash:base64:6]' --out-file src/locales/en.json",
+    "compile:i18n": "formatjs compile-folder --ast --format simple src/locales src/compiled-locales",
+    "i18n": "npm run extract:i18n && npm run compile:i18n",
+    "extract": "formatjs extract 'src/**/*.{js,ts,tsx}' --out-file src/locales/en.json --id-interpolation-pattern '[sha512:contenthash:base64:6]'"
   },
   "dependencies": {
     "next": "^11.1.0",
     "next-seo": "^4.26.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-intl": "^5.20.10",
     "react-query": "^3.19.6",
     "styled-jsx-plugin-postcss": "^4.0.1"
   },
   "devDependencies": {
+    "@formatjs/cli": "^4.2.33",
     "@next/bundle-analyzer": "^11.1.0",
     "@types/node": "^16.4.14",
     "@types/react": "^17.0.17",
     "@typescript-eslint/eslint-plugin": "^4.29.1",
     "autoprefixer": "^10.3.1",
+    "babel-plugin-formatjs": "^10.3.7",
     "cross-env": "^7.0.3",
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",

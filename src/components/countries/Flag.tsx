@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Image from 'next/image';
+import { FormattedMessage } from 'react-intl';
 
 import { CountryInfo } from '../ranking-table/country.interface';
 
@@ -15,13 +16,19 @@ export function Flag({ name, flag, region, population, area }: CountryInfo) {
           <h3 className="text-blue-800 text-base mt-8">
             {population.toLocaleString()}
           </h3>
-          <h4 className="text-sm text-gray-500">Population</h4>
+          <h4 className="text-sm text-gray-500">
+            {' '}
+            <FormattedMessage defaultMessage="Population" />
+          </h4>
         </div>
         <div>
           <h3 className="text-blue-800 text-base mt-8">
             {area.toLocaleString()}
           </h3>
-          <h4 className="text-sm text-gray-500">Area</h4>
+          <h4 className="text-sm text-gray-500">
+            {' '}
+            <FormattedMessage defaultMessage="Area" />
+          </h4>
         </div>
       </div>
     </div>

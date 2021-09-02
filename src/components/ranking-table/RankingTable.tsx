@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { FormattedMessage } from 'react-intl';
+
 import { CountryInfo } from './country.interface';
 import { Row } from './Row';
 
@@ -12,13 +14,17 @@ export function RankingTable({ countries = [] }: { countries: CountryInfo[] }) {
       <table className="table-fixed w-full text-center">
         <thead>
           <tr>
-            <th className="text-gray-400 font-medium text-base">Name</th>
-            <th className="text-gray-400 font-medium text-base">Population</th>
-            <th className="hidden md:table-cell text-gray-400 font-medium text-base">
-              Area (km)
+            <th className="text-gray-400 font-medium text-base">
+              <FormattedMessage defaultMessage="Name" />
+            </th>
+            <th className="text-gray-400 font-medium text-base">
+              <FormattedMessage defaultMessage="Population" />
             </th>
             <th className="hidden md:table-cell text-gray-400 font-medium text-base">
-              Gini
+              <FormattedMessage defaultMessage="Area (km)" />
+            </th>
+            <th className="hidden md:table-cell text-gray-400 font-medium text-base">
+              <FormattedMessage defaultMessage="Gini" />
             </th>
           </tr>
         </thead>

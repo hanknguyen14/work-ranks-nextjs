@@ -14,4 +14,8 @@ module.exports = withBundleAnalyzer({
   images: {
     domains: ['restcountries.eu'],
   },
+  i18n: {
+    locales: ['en', 'vi'],
+    defaultLocale: 'en',
+  },
 });
